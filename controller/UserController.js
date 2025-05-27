@@ -44,6 +44,7 @@ const login = (req, res) => {
       // token 발급
       const token = jwt.sign(
         {
+          id: loginUser.id,
           email: loginUser.email,
         },
         process.env.PRIVATE_KEY,
